@@ -5,33 +5,31 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: npavelic <npavelic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/07 16:49:37 by npavelic          #+#    #+#             */
-/*   Updated: 2023/04/07 19:36:13 by npavelic         ###   ########.fr       */
+/*   Created: 2023/04/04 22:56:34 by npavelic          #+#    #+#             */
+/*   Updated: 2023/04/07 19:52:18 by npavelic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft/libft.h"
 #include "push_swap.h"
 
-static int	isnt_valid_int(char *arg)
-{
-	int	i;
-	int	has_sign;
 
-	i = 0;
-	has_sign = 0;
-	if (arg[i] == '+' || arg[i] == '-')
+void	fill_stack(int argc, char **argv, t_stack **stako)
+{
+	int		i;
+	int		value;
+	t_stack	*node;
+	t_stack	*prev;
+
+	prev = NULL;
+	i = argc;
+	while (--i > 0)
 	{
-		has_sign = 1;
-		i++;
+		value = atoi(argv[i]);
+		node = malloc(sizeof(t_stack));
+		node->content = value;
+		node->next = prev;
+		prev = node;
 	}
-	while (arg[i])
-	{
-		if (!ft_isdigit(arg[i]))
-			return (1);
-		i++;
-	}
-	if (has_sign && i == 1)
-		return (1);
-	return (0);
+	*stako = prev;
 }

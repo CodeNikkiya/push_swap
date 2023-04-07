@@ -6,7 +6,7 @@
 /*   By: npavelic <npavelic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 13:45:14 by npavelic          #+#    #+#             */
-/*   Updated: 2023/04/07 19:05:47 by npavelic         ###   ########.fr       */
+/*   Updated: 2023/04/07 19:52:44 by npavelic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ typedef struct s_stack
 	struct s_stack	*next;
 }	t_stack;
 
-int	that_aint_right(int argc, char **argv);
+int		that_aint_right(int argc, char **argv);
+void	fill_stack(int argc, char **argv, t_stack **stako);
 
 #endif
