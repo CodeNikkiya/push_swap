@@ -6,7 +6,7 @@
 /*   By: npavelic <npavelic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 22:56:34 by npavelic          #+#    #+#             */
-/*   Updated: 2023/04/08 12:27:18 by npavelic         ###   ########.fr       */
+/*   Updated: 2023/04/08 15:02:58 by npavelic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,17 @@ int	main(int argc, char **argv)
 	testit (a_stack, b_stack);
 	swap_s(a_stack, b_stack);
 	testit (a_stack, b_stack);
+	rotate_two(&b_stack, &a_stack);
+	testit (a_stack, b_stack);
+	rotate_a (&a_stack);
+	testit (a_stack, b_stack);
+	rotate_b (&b_stack);
+	testit (a_stack, b_stack);
+	rev_rot (&a_stack);
+	testit (a_stack, b_stack);
 	push_to_a(&b_stack, &a_stack);
+	testit (a_stack, b_stack);
+	rev_rot (&b_stack);
 	testit (a_stack, b_stack);
 	return (0);
 }
