@@ -1,35 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack_fill.c                                       :+:      :+:    :+:   */
+/*   freedom_funcs.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: npavelic <npavelic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/04 22:56:34 by npavelic          #+#    #+#             */
-/*   Updated: 2023/04/09 21:47:35 by npavelic         ###   ########.fr       */
+/*   Created: 2023/04/09 18:32:25 by npavelic          #+#    #+#             */
+/*   Updated: 2023/04/09 18:32:46 by npavelic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft/libft.h"
 #include "push_swap.h"
 
-
-void	fill_stack(int argc, char **argv, t_stack **stako)
+void	destroy_str_arr(char **string_arr)
 {
-	int		i;
-	int		value;
-	t_stack	*node;
-	t_stack	*prev;
+	int	i;
 
-	prev = NULL;
-	i = argc;
-	while (--i > 0)
+	i = 0;
+	while (string_arr[i] != NULL)
 	{
-		value = ft_atoi(argv[i]);
-		node = malloc(sizeof(t_stack));
-		node->content = value;
-		node->next = prev;
-		prev = node;
+		free(string_arr[i]);
+		i++;
 	}
-	*stako = prev;
+	free(string_arr);
 }

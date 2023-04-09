@@ -1,35 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack_fill.c                                       :+:      :+:    :+:   */
+/*   element_counter.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: npavelic <npavelic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/04 22:56:34 by npavelic          #+#    #+#             */
-/*   Updated: 2023/04/09 21:47:35 by npavelic         ###   ########.fr       */
+/*   Created: 2023/04/07 16:49:37 by npavelic          #+#    #+#             */
+/*   Updated: 2023/04/08 17:41:28 by npavelic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft/libft.h"
 #include "push_swap.h"
 
-
-void	fill_stack(int argc, char **argv, t_stack **stako)
+int	count_stack(t_stack *stackie)
 {
 	int		i;
-	int		value;
-	t_stack	*node;
-	t_stack	*prev;
+	t_stack	*neo;
 
-	prev = NULL;
-	i = argc;
-	while (--i > 0)
+	i = 0;
+	neo = stackie;
+	while (neo != NULL)
 	{
-		value = ft_atoi(argv[i]);
-		node = malloc(sizeof(t_stack));
-		node->content = value;
-		node->next = prev;
-		prev = node;
+		i++;
+		neo = neo -> next;
 	}
-	*stako = prev;
+	return (i);
+}
+
+int	a_fully_sorted(int argc, t_stack *a_stack)
+{
+	int		i;
+	t_stack	*neo;
+
+	if a_stack = NULL
+		return (0);
+	i = 0;
+	neo = a_stack;
+	while (neo && neo->next)
+	{
+		if (neo->content > neo->next->content)
+			return (0);
+		i++;
+		neo = neo->next;
+	}
+	if (i == (argc - 2))
+		return (1);
+	else
+		return (0);
 }

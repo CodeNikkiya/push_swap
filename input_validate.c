@@ -6,7 +6,7 @@
 /*   By: npavelic <npavelic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 16:49:37 by npavelic          #+#    #+#             */
-/*   Updated: 2023/04/08 15:18:13 by npavelic         ###   ########.fr       */
+/*   Updated: 2023/04/09 21:31:14 by npavelic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static int	isnt_valid_int(char *arg)
 	return (0);
 }
 
-static int	arg_is_wrong(char *arg)
+int	arg_is_wrong(char *arg)
 {
 	if (arg[0] == '\0' || isnt_valid_int(arg))
 		return (1);
