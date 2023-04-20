@@ -6,7 +6,7 @@
 /*   By: npavelic <npavelic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 22:56:34 by npavelic          #+#    #+#             */
-/*   Updated: 2023/04/09 20:40:42 by npavelic         ###   ########.fr       */
+/*   Updated: 2023/04/20 22:37:39 by npavelic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,25 @@ void	testit(t_stack *stako, t_stack *stako2)
 	}
 	printf("%s\n", "____________________________________________");
 }
+
+		// stako->index = 0;
+		// stako->current_pos = i - 1;
+		// stako->target_pos = 0;
+		// stako->cost_a = 0;
+		// stako->cost_b = 0;
+
+void	second_tester(t_stack *stako)
+{
+	printf("%s\n", "____________________________________________");
+	while (stako)
+	{
+		printf("%i\t%i\t%i\t%i\t%i\t%i\n", stako->content, stako->index, stako->current_pos, stako->target_pos, stako->cost_a, stako->cost_b);
+		stako = stako->next;
+	}
+	printf("%s\n", "____________________________________________");
+}
+
+
 /*
 	testit (a_stack, b_stack);
 	swap_a(a_stack);
@@ -69,11 +88,13 @@ int	main(int argc, char **argv)
 	t_stack	*a_stack;
 
 	if ((argc == 2) && single_arg_but_valid (argv[1]))
-		 handle_single_arg(argv[1], &a_stack);
+		handle_single_arg(argv[1], &a_stack);
 	else if (that_aint_right(argc, argv))
 		return (1);
-	fill_stack(argc, argv, &a_stack);
+	else
+		fill_stack(argc, argv, &a_stack);
 	b_stack = NULL;
-	testit (a_stack, b_stack);
+//	testit (a_stack, b_stack);
+	second_tester(a_stack);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: npavelic <npavelic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 16:49:37 by npavelic          #+#    #+#             */
-/*   Updated: 2023/04/08 17:41:28 by npavelic         ###   ########.fr       */
+/*   Updated: 2023/04/19 18:50:36 by npavelic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int	a_fully_sorted(int argc, t_stack *a_stack)
 		i++;
 		neo = neo->next;
 	}
-	if (i == (argc - 2))
+	if (i == (argc - 1))
 		return (1);
 	else
 		return (0);

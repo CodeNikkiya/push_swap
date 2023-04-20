@@ -6,7 +6,7 @@
 /*   By: npavelic <npavelic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 13:45:14 by npavelic          #+#    #+#             */
-/*   Updated: 2023/04/09 21:31:20 by npavelic         ###   ########.fr       */
+/*   Updated: 2023/04/20 20:38:43 by npavelic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,11 @@
 typedef struct s_stack
 {
 	int				content;
+	int				index;
+	int				current_pos;
+	int				target_pos;
+	int				cost_a;
+	int				cost_b;
 	struct s_stack	*next;
 }	t_stack;
 
@@ -41,6 +46,5 @@ void	rev_rot_two(t_stack **a_stack, t_stack **b_stack);
 void	destroy_str_arr(char **string_arr);
 int		single_arg_but_valid(char *str);
 void	handle_single_arg(char *str, t_stack **stack);
-
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: npavelic <npavelic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 16:49:37 by npavelic          #+#    #+#             */
-/*   Updated: 2023/04/09 22:13:10 by npavelic         ###   ########.fr       */
+/*   Updated: 2023/04/19 14:22:02 by npavelic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -173,16 +173,3 @@ void	handle_single_arg(char *str, t_stack **stack)
 	destroy_str_arr(array);
 }
 
-
-	// while (array[i])
-	// 	i++;
-	// while (--i >= 0)
-	// {
-	// 	value = atoi(array[i]);
-	// 	node = malloc(sizeof(t_stack));
-	// 	node->content = value;
-	// 	node->next = prev;
-	// 	prev = node;
-	// }
-	// destroy_str_arr(array);
-	// *stack = prev;
