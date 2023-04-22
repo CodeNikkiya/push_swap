@@ -6,7 +6,7 @@
 /*   By: npavelic <npavelic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/08 11:08:07 by npavelic          #+#    #+#             */
-/*   Updated: 2023/04/08 11:29:56 by npavelic         ###   ########.fr       */
+/*   Updated: 2023/04/22 11:48:39 by npavelic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,22 +16,29 @@
 static void	swap_top(t_stack *stack)
 {
 	int		i;
-	t_stack	*l_checkk;
 	t_stack	*second;
 
-	i = 0;
-	l_checkk = stack;
-	while (l_checkk)
-	{
-		i++;
-		l_checkk = l_checkk->next;
-	}
-	if (i < 2)
+	if (!stack->next)
 		return ;
 	second = stack->next;
 	i = second->content;
 	second->content = stack->content;
 	stack->content = i;
+	i = second->index;
+	second->index = stack->index;
+	stack->index = i;
+	i = second->current_pos;
+	second->current_pos = stack->current_pos;
+	stack->current_pos = i;
+	i = second->target_pos;
+	second->target_pos = stack->target_pos;
+	stack->target_pos = i;
+	i = second->cost_a;
+	second->cost_a = stack->cost_a;
+	stack->cost_a = i;
+	i = second->cost_b;
+	second->cost_b = stack->cost_b;
+	stack->cost_b = i;
 }
 
 void	swap_a(t_stack *stack)

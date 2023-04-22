@@ -6,7 +6,7 @@
 /*   By: npavelic <npavelic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 22:56:34 by npavelic          #+#    #+#             */
-/*   Updated: 2023/04/20 22:48:39 by npavelic         ###   ########.fr       */
+/*   Updated: 2023/04/22 20:14:50 by npavelic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static void	indexing(t_stack **node)
 	int		smaller_nums;
 
 	temp = *node;
-	smaller_nums = 0;
+	smaller_nums = 1;
 	while (temp)
 	{
 		check = *node;
@@ -33,8 +33,7 @@ static void	indexing(t_stack **node)
 			check = check->next;
 		}
 		temp->index = smaller_nums;
-		printf ("%i\n", temp->index);
-		smaller_nums = 0;
+		smaller_nums = 1;
 		temp = temp->next;
 	}
 }
@@ -54,7 +53,7 @@ void	fill_stack(int argc, char **argv, t_stack **stako)
 		node = malloc(sizeof(t_stack));
 		node->content = value;
 		node->index = 0;
-		node->current_pos = i - 1;
+		node->current_pos = i;
 		node->target_pos = 0;
 		node->cost_a = 0;
 		node->cost_b = 0;

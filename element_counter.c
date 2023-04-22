@@ -6,7 +6,7 @@
 /*   By: npavelic <npavelic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 16:49:37 by npavelic          #+#    #+#             */
-/*   Updated: 2023/04/19 18:50:36 by npavelic         ###   ########.fr       */
+/*   Updated: 2023/04/22 14:52:52 by npavelic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,24 +28,37 @@ int	count_stack(t_stack *stackie)
 	return (i);
 }
 
-int	a_fully_sorted(int argc, t_stack *a_stack)
+void	curren_positions(t_stack *stack)
 {
-	int		i;
-	t_stack	*neo;
+	int	i;
 
-	if a_stack = NULL
-		return (0);
-	i = 0;
-	neo = a_stack;
-	while (neo && neo->next)
+	i = 1;
+	while (stack)
 	{
-		if (neo->content > neo->next->content)
-			return (0);
+		stack->current_pos = i;
+		stack = stack->next;
 		i++;
-		neo = neo->next;
 	}
-	if (i == (argc - 1))
-		return (1);
-	else
-		return (0);
 }
+
+//int	a_fully_sorted(int argc, t_stack *a_stack)
+//{
+//	int		i;
+//	t_stack	*neo;
+//
+//	if a_stack = NULL
+//		return (0);
+//	i = 0;
+//	neo = a_stack;
+//	while (neo && neo->next)
+//	{
+//		if (neo->content > neo->next->content)
+//			return (0);
+//		i++;
+//		neo = neo->next;
+//	}
+//	if (i == (argc - 1))
+//		return (1);
+//	else
+//		return (0);
+//}

@@ -6,7 +6,7 @@
 /*   By: npavelic <npavelic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 13:45:14 by npavelic          #+#    #+#             */
-/*   Updated: 2023/04/20 20:38:43 by npavelic         ###   ########.fr       */
+/*   Updated: 2023/04/22 19:20:42 by npavelic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,12 @@ void	rev_rot_two(t_stack **a_stack, t_stack **b_stack);
 void	destroy_str_arr(char **string_arr);
 int		single_arg_but_valid(char *str);
 void	handle_single_arg(char *str, t_stack **stack);
+void	solver_of_threes(t_stack **a_stack);
+void	ein_zwei_drei(int argc, t_stack **a_stack);
+int		count_stack(t_stack *stackie);
+void	do_sorting(int total, t_stack **a_stack, t_stack **b_stack);
+void	curren_positions(t_stack *stack);
+void	values_for_nodes(int total, t_stack **a_stack, t_stack **b_stack);
+void	calculate_moves(t_stack *a_stack, t_stack *b_stack);
 
 #endif
