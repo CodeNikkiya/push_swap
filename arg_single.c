@@ -6,13 +6,12 @@
 /*   By: npavelic <npavelic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 16:49:37 by npavelic          #+#    #+#             */
-/*   Updated: 2023/04/19 14:22:02 by npavelic         ###   ########.fr       */
+/*   Updated: 2023/04/23 20:07:12 by npavelic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft/libft.h"
 #include "push_swap.h"
-
 
 /*
 int	array_aint_right(int argc, char **array)
@@ -62,7 +61,6 @@ static int	array_has_doubles(char **array)
 	return (0);
 }
 
-
 int	single_arg_but_valid(char *str)
 {
 	int		i;
@@ -89,7 +87,6 @@ int	single_arg_but_valid(char *str)
 	}
 	return (1);
 }
-
 
 // void	handle_single_arg(char *str, t_stack **stack)
 // {
@@ -145,7 +142,6 @@ int	single_arg_but_valid(char *str)
 // 	destroy_str_arr(array);
 // }
 
-
 void	handle_single_arg(char *str, t_stack **stack)
 {
 	int		i;
@@ -172,4 +168,3 @@ void	handle_single_arg(char *str, t_stack **stack)
 	*stack = prev;
 	destroy_str_arr(array);
 }
-

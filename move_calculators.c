@@ -6,18 +6,16 @@
 /*   By: npavelic <npavelic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 09:09:57 by npavelic          #+#    #+#             */
-/*   Updated: 2023/04/22 20:06:56 by npavelic         ###   ########.fr       */
+/*   Updated: 2023/04/23 20:06:33 by npavelic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft/libft.h"
 #include "push_swap.h"
 
-
 // ra = 1, rb = 2, rra = 4, rrb = 8  
 // ra + rb = 3, ra + rrb = 9, rra + rb = 6, rra + rrb = 12
 // 
-
 
 static int	same_moves(int a_moves, int b_moves)
 {

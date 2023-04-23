@@ -6,7 +6,7 @@
 /*   By: npavelic <npavelic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 16:49:37 by npavelic          #+#    #+#             */
-/*   Updated: 2023/04/23 17:46:05 by npavelic         ###   ########.fr       */
+/*   Updated: 2023/04/23 20:07:17 by npavelic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,4 +69,3 @@ void	master_sorter(int kontent, t_stack **a_stack, t_stack **b_stack)
 	if (temp->cost_b == 6)
 		rra_rb(kontent, temp->target_pos, a_stack, b_stack);
 }
-

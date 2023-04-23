@@ -6,7 +6,7 @@
 /*   By: npavelic <npavelic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 16:49:37 by npavelic          #+#    #+#             */
-/*   Updated: 2023/04/23 18:49:54 by npavelic         ###   ########.fr       */
+/*   Updated: 2023/04/23 20:03:54 by npavelic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,4 @@ void	a_final_reckoning(t_stack **a_stack, int total)
 		if (ra_or_rra == 2)
 			rev_rotate_a (a_stack);
 	}
-
 }

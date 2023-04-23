@@ -6,7 +6,7 @@
 /*   By: npavelic <npavelic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 13:45:14 by npavelic          #+#    #+#             */
-/*   Updated: 2023/04/23 19:30:13 by npavelic         ###   ########.fr       */
+/*   Updated: 2023/04/23 20:05:47 by npavelic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 # include <unistd.h>
 # include <stdio.h>
 
-
 typedef struct s_stack
 {
 	int				content;
@@ -29,9 +28,6 @@ typedef struct s_stack
 	int				cost_b;
 	struct s_stack	*next;
 }	t_stack;
-
-void	testit(t_stack *stako, t_stack *stako2); //remove
-void	second_tester(t_stack *stako); //remove
 
 int		that_aint_right(int argc, char **argv);
 int		arg_is_wrong(char *arg);

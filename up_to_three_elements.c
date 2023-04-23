@@ -6,7 +6,7 @@
 /*   By: npavelic <npavelic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 16:49:37 by npavelic          #+#    #+#             */
-/*   Updated: 2023/04/21 21:26:16 by npavelic         ###   ########.fr       */
+/*   Updated: 2023/04/23 20:07:30 by npavelic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ static void	needs_two_actions(t_stack **a_stack)
 		swap_a(*a_stack);
 		return ;
 	}
-
 }
 
 void	solver_of_threes(t_stack **a_stack)

@@ -6,14 +6,12 @@
 /*   By: npavelic <npavelic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 22:56:34 by npavelic          #+#    #+#             */
-/*   Updated: 2023/04/22 20:14:50 by npavelic         ###   ########.fr       */
+/*   Updated: 2023/04/23 20:06:14 by npavelic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft/libft.h"
 #include "push_swap.h"
-
-
 
 static void	indexing(t_stack **node)
 {
