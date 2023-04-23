@@ -6,7 +6,7 @@
 /*   By: npavelic <npavelic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 13:45:14 by npavelic          #+#    #+#             */
-/*   Updated: 2023/04/22 19:20:42 by npavelic         ###   ########.fr       */
+/*   Updated: 2023/04/23 19:30:13 by npavelic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <unistd.h>
 # include <stdio.h>
 
+
 typedef struct s_stack
 {
 	int				content;
@@ -28,6 +29,9 @@ typedef struct s_stack
 	int				cost_b;
 	struct s_stack	*next;
 }	t_stack;
+
+void	testit(t_stack *stako, t_stack *stako2); //remove
+void	second_tester(t_stack *stako); //remove
 
 int		that_aint_right(int argc, char **argv);
 int		arg_is_wrong(char *arg);
@@ -53,5 +57,9 @@ void	do_sorting(int total, t_stack **a_stack, t_stack **b_stack);
 void	curren_positions(t_stack *stack);
 void	values_for_nodes(int total, t_stack **a_stack, t_stack **b_stack);
 void	calculate_moves(t_stack *a_stack, t_stack *b_stack);
+void	master_sorter(int kontent, t_stack **a_stack, t_stack **b_stack);
+int		a_fully_sorted(int nums, t_stack *a_stack);
+void	a_final_reckoning(t_stack **a_stack, int total);
+void	destroy_linked_list(t_stack *string_arr);
 
 #endif

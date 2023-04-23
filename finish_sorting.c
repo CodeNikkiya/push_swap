@@ -1,64 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   element_counter.c                                  :+:      :+:    :+:   */
+/*   finish_sorting.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: npavelic <npavelic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 16:49:37 by npavelic          #+#    #+#             */
-/*   Updated: 2023/04/23 19:07:38 by npavelic         ###   ########.fr       */
+/*   Updated: 2023/04/23 18:49:54 by npavelic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft/libft.h"
 #include "push_swap.h"
 
-int	count_stack(t_stack *stackie)
+void	a_final_reckoning(t_stack **a_stack, int total)
 {
-	int		i;
-	t_stack	*neo;
+	int		ra_or_rra;
+	t_stack	*temp;
 
-	i = 0;
-	neo = stackie;
-	while (neo != NULL)
-	{
-		i++;
-		neo = neo -> next;
-	}
-	return (i);
-}
-
-void	curren_positions(t_stack *stack)
-{
-	int	i;
-
-	i = 1;
-	while (stack)
-	{
-		stack->current_pos = i;
-		stack = stack->next;
-		i++;
-	}
-}
-
-int	a_fully_sorted(int nums, t_stack *a_stack)
-{
-	int		i;
-	t_stack	*neo;
-
-	if (a_stack == NULL)
-		return (0);
-	i = 1;
-	neo = a_stack;
-	while (neo && neo->next)
-	{
-		if (neo->content > neo->next->content)
-			return (0);
-		i++;
-		neo = neo->next;
-	}
-	if (i == (nums))
-		return (1);
+	curren_positions (*a_stack);
+	temp = *a_stack;
+	while (temp->index != 1)
+		temp = temp->next;
+	if ((temp->current_pos + 1) <= (total / 2))
+		ra_or_rra = 1;
 	else
-		return (0);
+		ra_or_rra = 2;
+	while ((*a_stack)->index != 1)
+	{
+		if (ra_or_rra == 1)
+			rotate_a (a_stack);
+		if (ra_or_rra == 2)
+			rev_rotate_a (a_stack);
+	}
+
 }

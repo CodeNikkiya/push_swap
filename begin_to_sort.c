@@ -6,7 +6,7 @@
 /*   By: npavelic <npavelic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 09:09:57 by npavelic          #+#    #+#             */
-/*   Updated: 2023/04/22 20:46:18 by npavelic         ###   ########.fr       */
+/*   Updated: 2023/04/23 19:26:43 by npavelic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,8 +83,16 @@ void	do_sorting(int total, t_stack **a_stack, t_stack **b_stack)
 		ein_zwei_drei (total, a_stack);
 		return ;
 	}
+	if (a_fully_sorted(total, *a_stack))
+		return ;
 	get_all_but_three_outta_a (a_stack, b_stack);
-	values_for_nodes (total, a_stack, b_stack);
-	calculate_moves(*a_stack, *b_stack);
-	printf("\n%i\n", pick_to_move(*b_stack));
+	while (count_stack(*b_stack))
+	{
+		values_for_nodes (total, a_stack, b_stack);
+		calculate_moves(*a_stack, *b_stack);
+		master_sorter (pick_to_move(*b_stack), a_stack, b_stack);
+	}
+	if (a_fully_sorted(total, *a_stack))
+		return ;
+	a_final_reckoning(a_stack, total);
 }

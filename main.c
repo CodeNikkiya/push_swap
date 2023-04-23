@@ -6,7 +6,7 @@
 /*   By: npavelic <npavelic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 22:56:34 by npavelic          #+#    #+#             */
-/*   Updated: 2023/04/22 11:31:13 by npavelic         ###   ########.fr       */
+/*   Updated: 2023/04/23 19:28:07 by npavelic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,9 +93,7 @@ int	main(int argc, char **argv)
 	else
 		fill_stack(argc, argv, &a_stack);
 	b_stack = NULL;
-	second_tester (a_stack);
 	do_sorting(count_stack(a_stack), &a_stack, &b_stack);
-	second_tester (a_stack);
-	second_tester (b_stack);
+	destroy_linked_list(a_stack);
 	return (0);
 }
