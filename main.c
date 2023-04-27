@@ -6,7 +6,7 @@
 /*   By: npavelic <npavelic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 22:56:34 by npavelic          #+#    #+#             */
-/*   Updated: 2023/04/23 20:03:22 by npavelic         ###   ########.fr       */
+/*   Updated: 2023/04/27 20:18:38 by npavelic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,8 @@ int	main(int argc, char **argv)
 	t_stack	*b_stack;
 	t_stack	*a_stack;
 
+	if (argc == 1)
+		return (0);
 	if ((argc == 2) && single_arg_but_valid (argv[1]))
 		handle_single_arg(argv[1], &a_stack);
 	else if (that_aint_right(argc, argv))

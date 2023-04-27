@@ -6,7 +6,7 @@
 /*   By: npavelic <npavelic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 16:49:37 by npavelic          #+#    #+#             */
-/*   Updated: 2023/04/23 19:07:38 by npavelic         ###   ########.fr       */
+/*   Updated: 2023/04/27 15:34:39 by npavelic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,9 @@ int	a_fully_sorted(int nums, t_stack *a_stack)
 	while (neo && neo->next)
 	{
 		if (neo->content > neo->next->content)
+		{
 			return (0);
+		}
 		i++;
 		neo = neo->next;
 	}

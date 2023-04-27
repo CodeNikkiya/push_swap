@@ -6,21 +6,12 @@
 /*   By: npavelic <npavelic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 09:09:57 by npavelic          #+#    #+#             */
-/*   Updated: 2023/04/23 19:26:43 by npavelic         ###   ########.fr       */
+/*   Updated: 2023/04/27 17:52:26 by npavelic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft/libft.h"
 #include "push_swap.h"
-
-static void	get_all_but_three_outta_a(t_stack **a_stack, t_stack **b_stack)
-{
-	while (count_stack(*a_stack) > 3)
-	{
-		push_to_b(a_stack, b_stack);
-	}
-	solver_of_threes(a_stack);
-}
 
 void	assign_targets_b(int total, t_stack *a_stack, t_stack *b_stack)
 {
@@ -85,7 +76,7 @@ void	do_sorting(int total, t_stack **a_stack, t_stack **b_stack)
 	}
 	if (a_fully_sorted(total, *a_stack))
 		return ;
-	get_all_but_three_outta_a (a_stack, b_stack);
+	push_but_three_outta_a (a_stack, b_stack, total);
 	while (count_stack(*b_stack))
 	{
 		values_for_nodes (total, a_stack, b_stack);

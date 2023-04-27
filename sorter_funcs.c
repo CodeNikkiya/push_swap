@@ -6,7 +6,7 @@
 /*   By: npavelic <npavelic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 16:49:37 by npavelic          #+#    #+#             */
-/*   Updated: 2023/04/23 20:07:17 by npavelic         ###   ########.fr       */
+/*   Updated: 2023/04/27 15:43:03 by npavelic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ static void	ra_rb(int kont, int ziel, t_stack **a_stack, t_stack **b_stack)
 {
 	while (((*a_stack)->current_pos != ziel) && ((*b_stack)->content != kont))
 		rotate_two(a_stack, b_stack);
-	while (((*a_stack)->current_pos == ziel) && ((*b_stack)->content != kont))
+	while ((*b_stack)->content != kont)
 		rotate_b(b_stack);
-	while (((*a_stack)->current_pos != ziel) && ((*b_stack)->content == kont))
+	while ((*a_stack)->current_pos != ziel)
 		rotate_a(a_stack);
 	push_to_a(b_stack, a_stack);
 }
@@ -28,27 +28,27 @@ static void	rra_rrb(int kont, int ziel, t_stack **a_stack, t_stack **b_stack)
 {
 	while (((*a_stack)->current_pos != ziel) && ((*b_stack)->content != kont))
 		rev_rot_two(a_stack, b_stack);
-	while (((*a_stack)->current_pos == ziel) && ((*b_stack)->content != kont))
+	while ((*b_stack)->content != kont)
 		rev_rotate_b(b_stack);
-	while (((*a_stack)->current_pos != ziel) && ((*b_stack)->content == kont))
+	while ((*a_stack)->current_pos != ziel)
 		rev_rotate_a(a_stack);
 	push_to_a(b_stack, a_stack);
 }
 
 static void	ra_rrb(int kont, int ziel, t_stack **a_stack, t_stack **b_stack)
 {
-	while (((*a_stack)->current_pos == ziel) && ((*b_stack)->content != kont))
+	while ((*b_stack)->content != kont)
 		rev_rotate_b(b_stack);
-	while (((*a_stack)->current_pos != ziel) && ((*b_stack)->content == kont))
+	while ((*a_stack)->current_pos != ziel)
 		rotate_a(a_stack);
 	push_to_a(b_stack, a_stack);
 }
 
 static void	rra_rb(int kont, int ziel, t_stack **a_stack, t_stack **b_stack)
 {
-	while (((*a_stack)->current_pos == ziel) && ((*b_stack)->content != kont))
+	while ((*b_stack)->content != kont)
 		rotate_b(b_stack);
-	while (((*a_stack)->current_pos != ziel) && ((*b_stack)->content == kont))
+	while ((*a_stack)->current_pos != ziel)
 		rev_rotate_a(a_stack);
 	push_to_a(b_stack, a_stack);
 }

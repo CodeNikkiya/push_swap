@@ -6,7 +6,7 @@
 /*   By: npavelic <npavelic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 13:45:14 by npavelic          #+#    #+#             */
-/*   Updated: 2023/04/23 20:05:47 by npavelic         ###   ########.fr       */
+/*   Updated: 2023/04/27 16:30:26 by npavelic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,5 +57,6 @@ void	master_sorter(int kontent, t_stack **a_stack, t_stack **b_stack);
 int		a_fully_sorted(int nums, t_stack *a_stack);
 void	a_final_reckoning(t_stack **a_stack, int total);
 void	destroy_linked_list(t_stack *string_arr);
+void	push_but_three_outta_a(t_stack **a_stack, t_stack **b_stack, int t);
 
 #endif

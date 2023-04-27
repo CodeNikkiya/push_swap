@@ -6,7 +6,7 @@
 /*   By: npavelic <npavelic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 09:09:57 by npavelic          #+#    #+#             */
-/*   Updated: 2023/04/23 20:06:33 by npavelic         ###   ########.fr       */
+/*   Updated: 2023/04/27 18:47:43 by npavelic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 // ra = 1, rb = 2, rra = 4, rrb = 8  
 // ra + rb = 3, ra + rrb = 9, rra + rb = 6, rra + rrb = 12
-// 
 
 static int	same_moves(int a_moves, int b_moves)
 {
@@ -31,14 +30,14 @@ static void	moves_to_node(t_stack *temp, int *possible_combs)
 	int	smol;
 	int	pos_in_ar;
 
-	i = 3;
+	i = -1;
 	the_r_binar[0] = 3;
 	the_r_binar[1] = 9;
 	the_r_binar[2] = 12;
 	the_r_binar[3] = 6;
-	smol = possible_combs[3];
-	pos_in_ar = 3;
-	while (--i >= 0)
+	smol = possible_combs[0];
+	pos_in_ar = 0;
+	while (++i < 4)
 	{
 		if (possible_combs[i] < smol)
 		{
